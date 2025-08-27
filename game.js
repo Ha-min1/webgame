@@ -1,4 +1,4 @@
-<script>
+
     // 캔버스 설정
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
@@ -179,4 +179,3 @@
     }
 
     draw();
-</script>
