@@ -2,9 +2,6 @@
 #include <vector>  // 벽돌 배열에 std::vector를 사용한다면 필요 (현재는 고정 배열이지만 나중에 바뀔 수도!)
 #include <cmath>   // 수학 함수 (M_PI, sin, cos 등) 필요할 때 대비해서 (나중에 공 움직임 등에)
 
-
-// --- game.h에서 extern으로 선언했던 전역 변수들 정의 ---
-// 여기에 실제로 메모리를 할당하고 초기값을 지정해주는 거야!
 double g_ballX;
 double g_ballY;
 double g_dx;
@@ -62,7 +59,6 @@ void initializeGame(double canvasWidth, double canvasHeight) { // 캔버스 크�
 // emscripten_run_script 같은 거 쓸 땐 #include <emscripten/emscripten.h>
 // emscripten.h는 일반 C++ 파일에 포함시켜도 문제가 없어.
 
-extern "C" { // C++이름 맹글링 피하고 C 호출 규약을 따르도록
 
 EMSCRIPTEN_KEEPALIVE void setKeyPressed(int key_code, bool is_pressed) {
     // 키 코드 (예: 1 for Right, 2 for Left)는 나중에 정의해야 해.
@@ -87,5 +83,4 @@ EMSCRIPTEN_KEEPALIVE int getBrickStatus(int col, int row) {
     return -1; // 에러 처리
 }
 
-} // extern "C"
 #endif
