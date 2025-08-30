@@ -51,8 +51,7 @@ void updateGameLogic(double canvasWidth, double canvasHeight);
 void detectBrickCollision(double canvasWidth, double canvasHeight);
 
 // 패들의 x 좌표를 업데이트하는 함수 (키 입력에 따라)
-void updatePaddlePosition(double canvasWidth);
-
+aw
 // 공이 벽에 부딪혔을 때 튕기는 로직 (JS의 draw() 안의 일부 로직 대체)
 void updateBallPosition(double canvasWidth, double canvasHeight);
 
@@ -62,7 +61,7 @@ void updateBallPosition(double canvasWidth, double canvasHeight);
 
 #ifdef __EMSCRIPTEN__
 #include <emscripten.h>
-extern "C" {
+extern "C" {EMSCRIPTEN_KEEPALIVE void updateGameLogic(double canvasWidth, double canvasHeight); }
 #endif
 
 // JS에서 호출해서 키 상태를 설정하는 함수
