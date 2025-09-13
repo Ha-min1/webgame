@@ -11,3 +11,24 @@ canvas {
     display: block;
     border: 2px solid #333;
 }
+#mobile-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  gap: 30px;
+}
+
+#mobile-controls button {
+  font-size: 3rem;         /* 이모지 크기 크게 */
+  padding: 24px 36px;      /* 터치 영역 넓게 */
+  min-width: 80px;         /* 버튼 최소 너비 */
+  min-height: 80px;        /* 버튼 최소 높이 */
+  border-radius: 50%;      /* 둥근 버튼 */
+  background: #f2f2f2;
+  border: 2px solid #0095DD;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  touch-action: manipulation;
+}
