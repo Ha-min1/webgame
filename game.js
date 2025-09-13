@@ -41,6 +41,25 @@
     document.addEventListener("keydown", keyDownHandler, false);
     document.addEventListener("keyup", keyUpHandler, false);
 
+document.getElementById('left-btn').addEventListener('touchstart', function() {
+  // 왼쪽 방향 처리 로직
+  handleDirection('left');
+});
+
+document.getElementById('right-btn').addEventListener('touchstart', function() {
+  // 오른쪽 방향 처리 로직
+  handleDirection('right');
+});
+
+// 예시: 방향 처리 함수
+function handleDirection(direction) {
+  if (direction === 'left') {
+    // 기존 왼쪽 방향 키 동작 코드
+  } else if (direction === 'right') {
+    // 기존 오른쪽 방향 키 동작 코드
+  }
+}
+
     function keyDownHandler(e) {
         if (e.key === "Right" || e.key === "ArrowRight") {
             rightPressed = true;
