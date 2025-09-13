@@ -54,9 +54,11 @@ document.getElementById('right-btn').addEventListener('touchstart', function() {
 // 예시: 방향 처리 함수
 function handleDirection(direction) {
   if (direction === 'left') {
-    // 기존 왼쪽 방향 키 동작 코드
+    leftPressed = true;
+    setTimeout(() => { leftPressed = false; }, 100); // 잠깐만 움직이게
   } else if (direction === 'right') {
-    // 기존 오른쪽 방향 키 동작 코드
+    rightPressed = true;
+    setTimeout(() => { rightPressed = false; }, 100);
   }
 }
 
